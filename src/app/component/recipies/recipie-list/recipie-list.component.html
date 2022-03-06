@@ -1,1 +1,20 @@
-<app-recipie-item></app-recipie-item>
+<div class="row">
+    <div class="col-xs-11">
+        <button class="btn-success">New Recipe</button>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="card" style="width: 20rem" *ngFor="let recipie of recipes">
+        <img [src]="recipie.imagePath" class="card-img-top" alt="{{ recipie.name }}" />
+        <div class="card-body">
+            <h5 class="card-title">{{ recipie.name }}</h5>
+            <p class="card-text">
+                {{ recipie.description }}
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <app-recipie-item></app-recipie-item>
+</div>
